@@ -54,6 +54,24 @@ export function findDuplicateTransactions(transactions: Transaction[]) {
   return duplicateTransactions;
 }
 
+/**
+ * Find Negative Amount transactions
+ * Given a list of transactions, find and return negative transactions. There can be more than one negative transactions.
+ * A transaction can be called negative if it has the  `amount` < 0.
+ * 
+ * This is how a transaction looks like.
+ * 
+ * {
+ *   id: 1,
+ *   source: 'A',
+ *   target: 'B',
+ *   amount: -300,
+ *   description: 'tikkie'
+ * }
+ * 
+ * @param transactions List of transactions
+ * @returns {Transaction[]} List of negative transactions
+ */
 export function findNeagtiveAmountTransactions(transactions: Transaction[]) {
 
   var negativeTransaction=[];
@@ -64,6 +82,24 @@ export function findNeagtiveAmountTransactions(transactions: Transaction[]) {
   }
   return negativeTransaction;
 }
+
+/**
+ * Find Transaction with same source and target address
+ * Given a list of transactions, find and return transactions with same source and target address.
+ * 
+ * This is how a transaction looks like.
+ * 
+ * {
+ *   id: 1,
+ *   source: 'A',  //source address
+ *   target: 'A',  //target address
+ *   amount: 300,
+ *   description: 'tikkie'
+ * }
+ * 
+ * @param transactions List of transactions
+ * @returns {Transaction[]} List of same source and target address transactions
+ */
 
 export function findTransactionWithSameSourceNTarget(transactions: Transaction[]) {
 
